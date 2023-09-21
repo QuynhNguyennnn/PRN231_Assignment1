@@ -19,14 +19,15 @@ namespace DataAccess.DAO
                 {
                     list = context.Members.ToList();
                 }
-            } catch (Exception e)
+            }
+            catch (Exception e)
             {
                 throw new Exception(e.Message);
             }
             return list;
         }
 
-        public static Member GetMember(int id)
+        public static Member GetMemberById(int id)
         {
             Member member = new Member();
             try
@@ -43,7 +44,7 @@ namespace DataAccess.DAO
             return member;
         }
 
-        public static void CreateMember(Member member)
+        public static void InsertMember(Member member)
         {
             try
             {

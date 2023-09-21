@@ -11,8 +11,8 @@ namespace DataAccess.Repository
 {
     public class MemberRepository : IMemberRepository
     {
-        public void CreateMember(Member m) => MemberDAO.CreateMember(m);
-        public Member GetMember(int id) => MemberDAO.GetMember(id);
+        public void InsertMember(Member m) => MemberDAO.InsertMember(m);
+        public Member GetMemberById(int id) => MemberDAO.GetMemberById(id);
         public void DeleteMember(Member m) => MemberDAO.DeleteMember(m);
         public void UpdateMember(Member m) => MemberDAO.UpdateMember(m);
         public List<Member> GetMembers() => MemberDAO.GetMembers();

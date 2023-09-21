@@ -48,7 +48,7 @@ namespace eStoreAPI.Controllers
             }
         }
 
-        [HttpPost("register")]
+/*        [HttpPost("register")]
         public ActionResult<AuthResponse> Register(RegisterDto registerDto)
         {
             AuthResponse authResponse = new AuthResponse();
@@ -69,7 +69,7 @@ namespace eStoreAPI.Controllers
                 authResponse.Roles = userValidate.Roles;
                 return Ok(authResponse);
             }
-        }
+        }*/
 
     }
 }

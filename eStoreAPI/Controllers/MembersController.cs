@@ -1,34 +1,52 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using BusinessObject;
-using AutoMapper;
+﻿using DataAccess.Repository.Interface;
 using DataAccess.Repository;
-using DataAccess.Repository.Interface;
+using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using BusinessObject;
 
-namespace eStoreAPI.Controllers
+[Route("api/[controller]")]
+[ApiController]
+public class MembersController : ControllerBase
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class MembersController : ControllerBase
+    private IMemberRepository repository = new MemberRepository();
+
+    [HttpGet]
+    public ActionResult<List<Member>> GetMembers() => repository.GetMembers();
+
+    [HttpGet("id")]
+    public ActionResult<Member> GetMemebrById(int id)
     {
-        private IMemberRepository repository = new MemberRepository();
-        private readonly IMapper _mapper;
+        return repository.GetMemberById(id);
+    }
 
-        public MembersController(IMapper mapper)
-        {
-            _mapper = mapper;
-        }
+    [HttpPost]
+    public IActionResult InserMember(Member member)
+    {
+        repository.InsertMember(member);
+        return NoContent();
+    }
 
-        // GET: api/Categories
-        [HttpGet]
-        public ActionResult<IEnumerable<Member>> GetCategories()
+    [HttpPost("edit/id")]
+    public ActionResult UpdateMember(int id, Member member)
+    {
+        var mImp = repository.GetMemberById(id);
+        if (mImp == null)
         {
-            return repository.GetMembers();
+            return NotFound();
         }
+        repository.UpdateMember(member);
+        return NoContent();
+    }
+
+    [HttpDelete("id")]
+    public ActionResult DeleteMember(int id)
+    {
+        var m = repository.GetMemberById(id);
+        if (m == null)
+        {
+            return NotFound();
+        }
+        repository.DeleteMember(m);
+        return NoContent();
     }
 }
