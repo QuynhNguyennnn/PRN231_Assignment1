@@ -1,0 +1,34 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Titile"] = "Register Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3>Registration Form</h3>
+<form method="post" asp-action="Register" asp-controller="Home" class="form-control">
+    <div class="text-lg-center">
+        <label for="email">Email: </label>
+        <input id="email" name="email" placeholder="Your email: " type="text" required />
+    </div>
+    <div class="text-center">
+        <label for="companyName">Company Name: </label>
+        <input id="companyName" name="companyName" placeholder="Your company name: " type="text" required />
+    </div>
+    <div class="text-center">
+        <label for="country">Company Name: </label>
+        <input id="companyName" name="companyName" placeholder="Your company name: " type="text" required />
+    </div>
+    <div class="text-center">
+        <label for="companyName">Company Name: </label>
+        <input id="companyName" name="companyName" placeholder="Your company name: " type="text" required />
+    </div>
+    <div class="text-center">
+        <label for="password">Password: </label>
+        <input id="password" name="password" placeholder="Your password" type="password" required />
+    </div>
+    <div class="text-center">
+        <button class="btn btn-primary" name="submit">Register</button>
+    </div>
+</form>

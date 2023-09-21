@@ -1,0 +1,76 @@
+﻿@using Microsoft.AspNetCore.Http;
+@model IEnumerable<BusinessObject.Product>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+<div class="search-container">
+    <form asp-action="FindByName">
+        <input type="text" placeholder="Search.." name="productName">
+        <button type="submit">Search</button>
+    </form>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UnitPrice)
+            </th>
+            <th>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UnitPrice)
+                </td>
+                @{
+                    if (@Context.Session.GetInt32("MemberId") == null)
+                    {
+                        //memberid = null -> view only
+                    }
+
+                    if (@Context.Session.GetInt32("MemberId") != null && @Context.Session.GetString("Roles") == "admin")
+                    {
+                        <td>
+                            @Html.ActionLink("Details", "Details", new {  id=item.ProductId }) |
+                            @Html.ActionLink("Edit", "Edit", new {  id=item.ProductId }) |
+                            @Html.ActionLink("Delete", "Delete", new {  id=item.ProductId })
+                        </td>
+                    }
+                    if (@Context.Session.GetInt32("MemberId") != null && @Context.Session.GetString("Roles") == "member")
+                    {
+                        <td>
+                            @Html.ActionLink("Details", "Details", new {  id=item.ProductId }) |
+                            @Html.ActionLink("Edit", "Edit", new {  id=item.ProductId })
+                        </td>
+                    }
+                }
+            </tr>
+        }
+    </tbody>
+</table>

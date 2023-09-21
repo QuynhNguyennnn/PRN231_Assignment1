@@ -1,0 +1,17 @@
+D:\FA23\PRN231\Assignment\Assignment01Solution_CE160198\BusinessObject\bin\Debug\net5.0\BusinessObject.deps.json
+D:\FA23\PRN231\Assignment\Assignment01Solution_CE160198\BusinessObject\bin\Debug\net5.0\BusinessObject.runtimeconfig.json
+D:\FA23\PRN231\Assignment\Assignment01Solution_CE160198\BusinessObject\bin\Debug\net5.0\BusinessObject.runtimeconfig.dev.json
+D:\FA23\PRN231\Assignment\Assignment01Solution_CE160198\BusinessObject\bin\Debug\net5.0\BusinessObject.dll
+D:\FA23\PRN231\Assignment\Assignment01Solution_CE160198\BusinessObject\bin\Debug\net5.0\BusinessObject.pdb
+D:\FA23\PRN231\Assignment\Assignment01Solution_CE160198\BusinessObject\obj\Debug\net5.0\BusinessObject.csproj.AssemblyReference.cache
+D:\FA23\PRN231\Assignment\Assignment01Solution_CE160198\BusinessObject\obj\Debug\net5.0\BusinessObject.GeneratedMSBuildEditorConfig.editorconfig
+D:\FA23\PRN231\Assignment\Assignment01Solution_CE160198\BusinessObject\obj\Debug\net5.0\BusinessObject.AssemblyInfoInputs.cache
+D:\FA23\PRN231\Assignment\Assignment01Solution_CE160198\BusinessObject\obj\Debug\net5.0\BusinessObject.AssemblyInfo.cs
+D:\FA23\PRN231\Assignment\Assignment01Solution_CE160198\BusinessObject\obj\Debug\net5.0\BusinessObject.csproj.CoreCompileInputs.cache
+D:\FA23\PRN231\Assignment\Assignment01Solution_CE160198\BusinessObject\obj\Debug\net5.0\BusinessObject.dll
+D:\FA23\PRN231\Assignment\Assignment01Solution_CE160198\BusinessObject\obj\Debug\net5.0\refint\BusinessObject.dll
+D:\FA23\PRN231\Assignment\Assignment01Solution_CE160198\BusinessObject\obj\Debug\net5.0\BusinessObject.pdb
+D:\FA23\PRN231\Assignment\Assignment01Solution_CE160198\BusinessObject\obj\Debug\net5.0\BusinessObject.genruntimeconfig.cache
+D:\FA23\PRN231\Assignment\Assignment01Solution_CE160198\BusinessObject\obj\Debug\net5.0\ref\BusinessObject.dll
+D:\FA23\PRN231\Assignment\Assignment01Solution_CE160198\BusinessObject\bin\Debug\net5.0\appsettings.Development.json
+D:\FA23\PRN231\Assignment\Assignment01Solution_CE160198\BusinessObject\bin\Debug\net5.0\appsettings.json

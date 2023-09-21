@@ -1,0 +1,17 @@
+D:\FA23\PRN231\Assignment\Assignment01Solution_CE160198\DataAccess\obj\Debug\net5.0\DataAccess.csproj.AssemblyReference.cache
+D:\FA23\PRN231\Assignment\Assignment01Solution_CE160198\DataAccess\obj\Debug\net5.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+D:\FA23\PRN231\Assignment\Assignment01Solution_CE160198\DataAccess\obj\Debug\net5.0\DataAccess.AssemblyInfoInputs.cache
+D:\FA23\PRN231\Assignment\Assignment01Solution_CE160198\DataAccess\obj\Debug\net5.0\DataAccess.AssemblyInfo.cs
+D:\FA23\PRN231\Assignment\Assignment01Solution_CE160198\DataAccess\obj\Debug\net5.0\DataAccess.csproj.CoreCompileInputs.cache
+D:\FA23\PRN231\Assignment\Assignment01Solution_CE160198\DataAccess\bin\Debug\net5.0\appsettings.Development.json
+D:\FA23\PRN231\Assignment\Assignment01Solution_CE160198\DataAccess\bin\Debug\net5.0\appsettings.json
+D:\FA23\PRN231\Assignment\Assignment01Solution_CE160198\DataAccess\bin\Debug\net5.0\DataAccess.deps.json
+D:\FA23\PRN231\Assignment\Assignment01Solution_CE160198\DataAccess\bin\Debug\net5.0\DataAccess.dll
+D:\FA23\PRN231\Assignment\Assignment01Solution_CE160198\DataAccess\bin\Debug\net5.0\DataAccess.pdb
+D:\FA23\PRN231\Assignment\Assignment01Solution_CE160198\DataAccess\bin\Debug\net5.0\BusinessObject.dll
+D:\FA23\PRN231\Assignment\Assignment01Solution_CE160198\DataAccess\bin\Debug\net5.0\BusinessObject.pdb
+D:\FA23\PRN231\Assignment\Assignment01Solution_CE160198\DataAccess\obj\Debug\net5.0\DataAccess.csproj.CopyComplete
+D:\FA23\PRN231\Assignment\Assignment01Solution_CE160198\DataAccess\obj\Debug\net5.0\DataAccess.dll
+D:\FA23\PRN231\Assignment\Assignment01Solution_CE160198\DataAccess\obj\Debug\net5.0\refint\DataAccess.dll
+D:\FA23\PRN231\Assignment\Assignment01Solution_CE160198\DataAccess\obj\Debug\net5.0\DataAccess.pdb
+D:\FA23\PRN231\Assignment\Assignment01Solution_CE160198\DataAccess\obj\Debug\net5.0\ref\DataAccess.dll
