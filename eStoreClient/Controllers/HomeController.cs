@@ -93,12 +93,12 @@ namespace eStoreClient.Controllers
                     }
 
                     // Handle other HTTP errors here.
-                    return View("Error"); // You can customize this error handling.
+                    return View("Index"); // You can customize this error handling.
                 }
                 catch (Exception)
                 {
                     // Handle other exceptions that may occur during the API call.
-                    return View("Error"); // You can customize this error handling.
+                    return View("Index"); // You can customize this error handling.
                 }
             }
 
@@ -154,12 +154,12 @@ namespace eStoreClient.Controllers
                     }
 
                     // Handle other HTTP errors here.
-                    return View("Error"); // You can customize this error handling.
+                    return View("Index"); // You can customize this error handling.
                 }
                 catch (Exception)
                 {
                     // Handle other exceptions that may occur during the API call.
-                    return View("Error"); // You can customize this error handling.
+                    return View("Index"); // You can customize this error handling.
                 }
             }
 

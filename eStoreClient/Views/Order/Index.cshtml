@@ -1,0 +1,84 @@
+﻿@using Microsoft.AspNetCore.Http;
+@model IEnumerable<BusinessObject.Order>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+@{
+    if (@Context.Session.GetInt32("MemberId") != null)
+    {
+        <p>
+            <a asp-action="Create">Create New</a>
+        </p>
+    }
+}
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.OrderDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RequiredDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ShippedDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Freight)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Member)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OrderDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RequiredDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ShippedDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Freight)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Member.City)
+                </td>
+                @{
+                    if (@Context.Session.GetInt32("MemberId") == null)
+                    {
+                        //memberid = null -> view only
+                    }
+
+                    if (@Context.Session.GetInt32("MemberId") != null && @Context.Session.GetString("Roles") == "admin")
+                    {
+                        <td>
+                            @Html.ActionLink("Details", "Details", new {  id=item.OrderId }) |
+                            @Html.ActionLink("Edit", "Edit", new {  id=item.OrderId }) |
+                            @Html.ActionLink("Delete", "Delete", new {  id=item.OrderId })
+                        </td>
+                    }
+                    if (@Context.Session.GetInt32("MemberId") != null && @Context.Session.GetString("Roles") == "member"
+                            && @Context.Session.GetInt32("MemberId") == item.MemberId)
+                    {
+                        <td>
+                            @Html.ActionLink("Details", "Details", new {  id=item.OrderId }) |
+                            @Html.ActionLink("Edit", "Edit", new {  id=item.OrderId })
+                        </td>
+                    }
+                }
+            </tr>
+        }
+    </tbody>
+</table>

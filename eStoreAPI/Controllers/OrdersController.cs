@@ -1,11 +1,14 @@
-﻿/*using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using BusinessObject.Models;
+using AutoMapper;
+using DataAccess.repository;
+using eStoreAPI.DTOs;
+using BusinessObject;
 
 namespace eStoreAPI.Controllers
 {
@@ -13,96 +16,57 @@ namespace eStoreAPI.Controllers
     [ApiController]
     public class OrdersController : ControllerBase
     {
-        private readonly Assignment1Context _context;
+        private readonly IMapper _mapper;
+        private IOrderRepository repository = new OrderRepository();
 
-        public OrdersController(Assignment1Context context)
+
+        public OrdersController(IMapper mapper)
         {
-            _context = context;
+            _mapper = mapper;
         }
 
-        // GET: api/Orders
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Order>>> GetOrders()
+        public ActionResult<List<Order>> GetOrders() => repository.GetOrders();
+
+
+        [HttpGet("id")]
+        public ActionResult<Order> GetOrderDetail(int id)
         {
-            return await _context.Orders.ToListAsync();
+            return repository.GetOrderByID(id);
         }
 
-        // GET: api/Orders/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<Order>> GetOrder(int id)
-        {
-            var order = await _context.Orders.FindAsync(id);
-
-            if (order == null)
-            {
-                return NotFound();
-            }
-
-            return order;
-        }
-
-        // PUT: api/Orders/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutOrder(int id, Order order)
-        {
-            if (id != order.OrderId)
-            {
-                return BadRequest();
-            }
-
-            _context.Entry(order).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!OrderExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return NoContent();
-        }
-
-        // POST: api/Orders
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Order>> PostOrder(Order order)
+        public IActionResult PostOrder(AddOrderDtos o)
         {
-            _context.Orders.Add(order);
-            await _context.SaveChangesAsync();
-
-            return CreatedAtAction("GetOrder", new { id = order.OrderId }, order);
-        }
-
-        // DELETE: api/Orders/5
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteOrder(int id)
-        {
-            var order = await _context.Orders.FindAsync(id);
-            if (order == null)
-            {
-                return NotFound();
-            }
-
-            _context.Orders.Remove(order);
-            await _context.SaveChangesAsync();
-
+            // Use mapper when post
+            var orderDto = _mapper.Map<Order>(o);
+            repository.InsertOrder(orderDto);
             return NoContent();
         }
 
-        private bool OrderExists(int id)
+        [HttpDelete("id")]
+        public IActionResult DeleteOrder(int id)
         {
-            return _context.Orders.Any(e => e.OrderId == id);
+            var o = repository.GetOrderByID(id);
+            if (o == null)
+            {
+                return NotFound();
+            }
+            repository.DeleteOrder(o);
+            return Ok(repository.GetOrders());
         }
+
+        [HttpPut("id")]
+        public IActionResult UpdateOrder(int id, Order o)
+        {
+            var oImp = repository.GetOrderByID(id);
+            if (o == null)
+                return NotFound();
+            var orderDto = _mapper.Map<Order>(o);
+            repository.UpdateOrder(orderDto);
+            return NoContent();
+        }
+        //[HttpGet("keyWord")]
+        //public ActionResult<List<Product>> FindProductsByName(string productName) => repository.FindProductsByName(productName);
     }
 }
-*/

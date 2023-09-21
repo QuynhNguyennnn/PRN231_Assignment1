@@ -8,9 +8,14 @@
 
 <h1>Index</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
+@{
+    if (@Context.Session.GetInt32("MemberId") != null)
+    {
+        <p>
+            <a asp-action="Create">Create New</a>
+        </p>
+    }
+}
 
 <div class="search-container">
     <form asp-action="FindByName">
@@ -62,13 +67,13 @@
                             @Html.ActionLink("Delete", "Delete", new {  id=item.ProductId })
                         </td>
                     }
-                    if (@Context.Session.GetInt32("MemberId") != null && @Context.Session.GetString("Roles") == "member")
-                    {
-                        <td>
-                            @Html.ActionLink("Details", "Details", new {  id=item.ProductId }) |
-                            @Html.ActionLink("Edit", "Edit", new {  id=item.ProductId })
-                        </td>
-                    }
+                    // if (@Context.Session.GetInt32("MemberId") != null && @Context.Session.GetString("Roles") == "member")
+                    // {
+                    //     <td>
+                    //         @Html.ActionLink("Details", "Details", new {  id=item.ProductId }) |
+                    //         @Html.ActionLink("Edit", "Edit", new {  id=item.ProductId })
+                    //     </td>
+                    // }
                 }
             </tr>
         }
