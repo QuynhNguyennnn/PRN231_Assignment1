@@ -312,5 +312,37 @@ namespace eStoreClient.Controllers
             // If ModelState is not valid, return to the create order form.
             return RedirectToAction("Index");
         }
+
+        public async Task<IActionResult> SortOrder(DateTime dateStart, DateTime dateEnd)
+        {
+            if (dateStart == DateTime.Parse("01/01/0001") || dateEnd == DateTime.Parse("01/01/0001"))
+            {
+                return RedirectToAction("Index");
+
+            }
+            HttpResponseMessage response = await client.GetAsync($"{OrderApiUrl}/sortOrder?dateStart={dateStart}&dateEnd={dateEnd}");
+
+            if (response.StatusCode == HttpStatusCode.NoContent)
+            {
+                return View("NoContent");
+            }
+
+            if (!response.IsSuccessStatusCode)
+            {
+                return View("Error");
+            }
+
+            string strData = await response.Content.ReadAsStringAsync();
+
+            var options = new JsonSerializerOptions
+            {
+                PropertyNameCaseInsensitive = true
+            };
+
+            List<Order> listOrders = JsonSerializer.Deserialize<List<Order>>(strData, options);
+
+            return View("Index", listOrders);
+
+        }
     }
 }

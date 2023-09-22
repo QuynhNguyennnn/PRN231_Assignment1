@@ -91,5 +91,24 @@ namespace DataAccess
                 throw new Exception(ex.Message);
             }
         }
+        public static List<Order> SortOrder(DateTime dateStart, DateTime dateEnd)
+        {
+            List<Order> list = new List<Order>();
+            try
+            {
+                using (var context = new eStoreContext())
+                {
+                    list = context.Orders
+                        .Where(o => o.OrderDate >= dateStart && o.OrderDate <= dateEnd)
+                        .OrderByDescending(o => o.Freight)
+                        .ToList();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return list;
+        }
     }
 }

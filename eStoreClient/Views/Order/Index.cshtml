@@ -15,6 +15,13 @@
         </p>
     }
 }
+<form asp-action="SortOrder" id="myForm">
+    <label for="dateStart">Date start:</label>
+    <input type="date" name="dateStart" id="dateStart">
+    <label for="dateEnd">Date End:</label>
+    <input type="date" name="dateEnd" id="dateEnd">
+    <input type="submit" value="Submit">
+</form>
 <table class="table">
     <thead>
         <tr>
@@ -82,3 +89,25 @@
         }
     </tbody>
 </table>
+<script>
+    const myForm = document.getElementById("myForm");
+    const dateStartInput = document.getElementById("dateStart");
+    const dateEndInput = document.getElementById("dateEnd");
+
+    myForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        // Lấy giá trị từ input fields
+        const dateStartValue = new Date(dateStartInput.value);
+        const dateEndValue = new Date(dateEndInput.value);
+
+        // Kiểm tra điều kiện
+        if (dateEndValue < dateStartValue) {
+            // Gán giá trị của dateStart cho dateEnd
+            dateEndInput.value = dateStartInput.value;
+        }
+
+        // Tiếp tục với việc gửi form (hoặc thực hiện xử lý khác nếu cần)
+        myForm.submit();
+    });
+</script>

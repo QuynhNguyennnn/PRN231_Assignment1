@@ -1,4 +1,5 @@
 ﻿using BusinessObject;
+using System;
 using System.Collections.Generic;
 
 namespace DataAccess.repository
@@ -10,5 +11,6 @@ namespace DataAccess.repository
         void DeleteOrder(Order order);
         void InsertOrder(Order order);
         void UpdateOrder(Order order);
+        List<Order> SortOrder(DateTime dateStart, DateTime dateEnd);
     }
 }
