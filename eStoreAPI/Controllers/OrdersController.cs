@@ -66,7 +66,7 @@ namespace eStoreAPI.Controllers
             repository.UpdateOrder(orderDto);
             return NoContent();
         }
-        [HttpGet("sortOrder")]
-        public ActionResult<List<Order>> SortOrder(DateTime dateStart, DateTime dateEnd) => repository.SortOrder(dateStart, dateEnd);
+        [HttpPost("sortOrder")]
+        public ActionResult<List<Order>> SortOrder(SortDto sortDto) => repository.SortOrder(sortDto.DateStart, sortDto.DateEnd);
     }
 }

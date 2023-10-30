@@ -19,12 +19,10 @@ namespace eStoreAPI.Controllers
     public class AuthController : ControllerBase
     {
         private readonly IMapper _mapper;
-        private readonly AppSetting _appSetting;
         private IAuthRepository repository = new AuthRepository();
-        public AuthController(IMapper mapper, IOptionsMonitor<AppSetting> optionsMonitor)
+        public AuthController(IMapper mapper)
         {
             _mapper = mapper;
-            _appSetting = optionsMonitor.CurrentValue;
         }
 
         [HttpPost("login")]

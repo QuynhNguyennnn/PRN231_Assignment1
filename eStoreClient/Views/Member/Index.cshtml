@@ -9,7 +9,7 @@
 <h1>Index</h1>
 
 @{
-    if (@Context.Session.GetInt32("MemberId") != null)
+    if (@Context.Session.GetInt32("MemberId") != null && @Context.Session.GetString("Roles") == "admin")
     {
         <p>
             <a asp-action="Create">Create New</a>

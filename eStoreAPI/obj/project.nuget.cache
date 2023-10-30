@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "J6WoRy3BzEy9lbCaMcV0ThzlHDSfpqYxa8Jwkis0Okhhr5u5A+MK24jaeceLxaXg1X1O5KgnjjsRnEmSQwp/iA==",
+  "dgSpecHash": "vEG+Oio0oWNJPnbjwxtzFYtpcaSHA1JA/ZMXJrWlzrrga4c7qcHCk1XbVnbSoTu+v+FFqebQsbuoqjfjXN2jGQ==",
   "success": true,
-  "projectFilePath": "D:\\FA23\\PRN231\\Assignment\\Assignment01Solution_CE160198\\eStoreAPI\\eStoreAPI.csproj",
+  "projectFilePath": "D:\\FA23\\PRN231\\Assignment\\Assignment01Solution_QuynhNN\\Assignment01Solution_CE160198\\eStoreAPI\\eStoreAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DELL\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

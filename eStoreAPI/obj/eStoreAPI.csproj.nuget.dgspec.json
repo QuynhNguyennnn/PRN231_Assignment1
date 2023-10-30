@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\FA23\\PRN231\\Assignment\\Assignment01Solution_CE160198\\eStoreAPI\\eStoreAPI.csproj": {}
+    "D:\\FA23\\PRN231\\Assignment\\Assignment01Solution_QuynhNN\\Assignment01Solution_CE160198\\eStoreAPI\\eStoreAPI.csproj": {}
   },
   "projects": {
-    "D:\\FA23\\PRN231\\Assignment\\Assignment01Solution_CE160198\\BusinessObject\\BusinessObject.csproj": {
+    "D:\\FA23\\PRN231\\Assignment\\Assignment01Solution_QuynhNN\\Assignment01Solution_CE160198\\BusinessObject\\BusinessObject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\FA23\\PRN231\\Assignment\\Assignment01Solution_CE160198\\BusinessObject\\BusinessObject.csproj",
+        "projectUniqueName": "D:\\FA23\\PRN231\\Assignment\\Assignment01Solution_QuynhNN\\Assignment01Solution_CE160198\\BusinessObject\\BusinessObject.csproj",
         "projectName": "BusinessObject",
-        "projectPath": "D:\\FA23\\PRN231\\Assignment\\Assignment01Solution_CE160198\\BusinessObject\\BusinessObject.csproj",
+        "projectPath": "D:\\FA23\\PRN231\\Assignment\\Assignment01Solution_QuynhNN\\Assignment01Solution_CE160198\\BusinessObject\\BusinessObject.csproj",
         "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "D:\\FA23\\PRN231\\Assignment\\Assignment01Solution_CE160198\\BusinessObject\\obj\\",
+        "outputPath": "D:\\FA23\\PRN231\\Assignment\\Assignment01Solution_QuynhNN\\Assignment01Solution_CE160198\\BusinessObject\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
           "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -77,21 +82,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\FA23\\PRN231\\Assignment\\Assignment01Solution_CE160198\\DataAccess\\DataAccess.csproj": {
+    "D:\\FA23\\PRN231\\Assignment\\Assignment01Solution_QuynhNN\\Assignment01Solution_CE160198\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\FA23\\PRN231\\Assignment\\Assignment01Solution_CE160198\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "D:\\FA23\\PRN231\\Assignment\\Assignment01Solution_QuynhNN\\Assignment01Solution_CE160198\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "D:\\FA23\\PRN231\\Assignment\\Assignment01Solution_CE160198\\DataAccess\\DataAccess.csproj",
+        "projectPath": "D:\\FA23\\PRN231\\Assignment\\Assignment01Solution_QuynhNN\\Assignment01Solution_CE160198\\DataAccess\\DataAccess.csproj",
         "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "D:\\FA23\\PRN231\\Assignment\\Assignment01Solution_CE160198\\DataAccess\\obj\\",
+        "outputPath": "D:\\FA23\\PRN231\\Assignment\\Assignment01Solution_QuynhNN\\Assignment01Solution_CE160198\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
           "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -99,14 +108,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\FA23\\PRN231\\Assignment\\Assignment01Solution_CE160198\\BusinessObject\\BusinessObject.csproj": {
-                "projectPath": "D:\\FA23\\PRN231\\Assignment\\Assignment01Solution_CE160198\\BusinessObject\\BusinessObject.csproj"
+              "D:\\FA23\\PRN231\\Assignment\\Assignment01Solution_QuynhNN\\Assignment01Solution_CE160198\\BusinessObject\\BusinessObject.csproj": {
+                "projectPath": "D:\\FA23\\PRN231\\Assignment\\Assignment01Solution_QuynhNN\\Assignment01Solution_CE160198\\BusinessObject\\BusinessObject.csproj"
               }
             }
           }
@@ -136,21 +146,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\FA23\\PRN231\\Assignment\\Assignment01Solution_CE160198\\eStoreAPI\\eStoreAPI.csproj": {
+    "D:\\FA23\\PRN231\\Assignment\\Assignment01Solution_QuynhNN\\Assignment01Solution_CE160198\\eStoreAPI\\eStoreAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\FA23\\PRN231\\Assignment\\Assignment01Solution_CE160198\\eStoreAPI\\eStoreAPI.csproj",
+        "projectUniqueName": "D:\\FA23\\PRN231\\Assignment\\Assignment01Solution_QuynhNN\\Assignment01Solution_CE160198\\eStoreAPI\\eStoreAPI.csproj",
         "projectName": "eStoreAPI",
-        "projectPath": "D:\\FA23\\PRN231\\Assignment\\Assignment01Solution_CE160198\\eStoreAPI\\eStoreAPI.csproj",
+        "projectPath": "D:\\FA23\\PRN231\\Assignment\\Assignment01Solution_QuynhNN\\Assignment01Solution_CE160198\\eStoreAPI\\eStoreAPI.csproj",
         "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "D:\\FA23\\PRN231\\Assignment\\Assignment01Solution_CE160198\\eStoreAPI\\obj\\",
+        "outputPath": "D:\\FA23\\PRN231\\Assignment\\Assignment01Solution_QuynhNN\\Assignment01Solution_CE160198\\eStoreAPI\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
           "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -158,17 +172,18 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\FA23\\PRN231\\Assignment\\Assignment01Solution_CE160198\\BusinessObject\\BusinessObject.csproj": {
-                "projectPath": "D:\\FA23\\PRN231\\Assignment\\Assignment01Solution_CE160198\\BusinessObject\\BusinessObject.csproj"
+              "D:\\FA23\\PRN231\\Assignment\\Assignment01Solution_QuynhNN\\Assignment01Solution_CE160198\\BusinessObject\\BusinessObject.csproj": {
+                "projectPath": "D:\\FA23\\PRN231\\Assignment\\Assignment01Solution_QuynhNN\\Assignment01Solution_CE160198\\BusinessObject\\BusinessObject.csproj"
               },
-              "D:\\FA23\\PRN231\\Assignment\\Assignment01Solution_CE160198\\DataAccess\\DataAccess.csproj": {
-                "projectPath": "D:\\FA23\\PRN231\\Assignment\\Assignment01Solution_CE160198\\DataAccess\\DataAccess.csproj"
+              "D:\\FA23\\PRN231\\Assignment\\Assignment01Solution_QuynhNN\\Assignment01Solution_CE160198\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "D:\\FA23\\PRN231\\Assignment\\Assignment01Solution_QuynhNN\\Assignment01Solution_CE160198\\DataAccess\\DataAccess.csproj"
               }
             }
           }
@@ -233,7 +248,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -15,6 +15,9 @@ namespace eStoreAPI
             CreateMap<LoginDto, Member>(); 
             CreateMap<Member, RegisterDto>();
             CreateMap<RegisterDto, Member>();
+            CreateMap<Order, SortDto>();
+            CreateMap<SortDto, Order>();
+            CreateMap<AddOrderDtos, Order>();
         }
 
     }

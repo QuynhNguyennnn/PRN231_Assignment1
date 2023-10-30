@@ -11,6 +11,9 @@ using System.Net;
 using System.Text.Json;
 using System.Text;
 using BusinessObject;
+using System.Globalization;
+using eStoreAPI.DTOs;
+using Microsoft.Data.SqlClient;
 
 namespace eStoreClient.Controllers
 {
@@ -313,15 +316,17 @@ namespace eStoreClient.Controllers
             return RedirectToAction("Index");
         }
 
-        public async Task<IActionResult> SortOrder(DateTime dateStart, DateTime dateEnd)
+        public async Task<IActionResult> SortOrder([Bind("DateStart,DateEnd")] SortDto sortDto)
         {
-            if (dateStart == DateTime.Parse("01/01/0001") || dateEnd == DateTime.Parse("01/01/0001"))
+/*            if (dateStart == DateTime.Parse("01/01/0001") || dateEnd == DateTime.Parse("01/01/0001"))
             {
                 return RedirectToAction("Index");
 
-            }
-            HttpResponseMessage response = await client.GetAsync($"{OrderApiUrl}/sortOrder?dateStart={dateStart}&dateEnd={dateEnd}");
-
+            }*/
+            //HttpResponseMessage response = await client.PostAsync($"{OrderApiUrl}/sortOrder?dateStart={dateStart}&dateEnd={dateEnd}");
+            var orderJson = JsonSerializer.Serialize(sortDto);
+            var content = new StringContent(orderJson, Encoding.UTF8, "application/json");
+            HttpResponseMessage response = await client.PostAsync($"{OrderApiUrl}/sortOrder", content);
             if (response.StatusCode == HttpStatusCode.NoContent)
             {
                 return View("NoContent");

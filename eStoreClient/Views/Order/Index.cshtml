@@ -17,9 +17,9 @@
 }
 <form asp-action="SortOrder" id="myForm">
     <label for="dateStart">Date start:</label>
-    <input type="date" name="dateStart" id="dateStart">
+    <input type="datetime-local" name="DateStart" id="dateStart">
     <label for="dateEnd">Date End:</label>
-    <input type="date" name="dateEnd" id="dateEnd">
+    <input type="datetime-local" name="DateEnd" id="dateEnd">
     <input type="submit" value="Submit">
 </form>
 <table class="table">
@@ -36,9 +36,6 @@
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Freight)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Member)
             </th>
             <th></th>
         </tr>
@@ -58,9 +55,6 @@
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Freight)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Member.City)
                 </td>
                 @{
                     if (@Context.Session.GetInt32("MemberId") == null)

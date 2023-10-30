@@ -1,6 +1,7 @@
 ﻿using BusinessObject;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 
 namespace DataAccess
@@ -97,9 +98,23 @@ namespace DataAccess
             var listProducts = new List<Product>();
             try
             {
-                using (var context = new eStoreContext())
+                bool checkPrice = IsDecimal(productName);
+                if (checkPrice)
                 {
-                    listProducts = context.Products.Where(p => p.ProductName.ToLower().Contains(productName.ToLower())).ToList();
+                    var unitP = Decimal.Parse(productName);
+                    using (var context = new eStoreContext())
+                    {
+                        listProducts = context.Products.Where(p =>
+                        (p.ProductName.ToLower().Contains(productName.ToLower()) || p.UnitPrice == (unitP))).ToList();
+                    }
+                }
+                else
+                {
+                    using (var context = new eStoreContext())
+                    {
+                        listProducts = context.Products.Where(p =>
+                        (p.ProductName.ToLower().Contains(productName.ToLower()))).ToList();
+                    }
                 }
             }
             catch (Exception ex)
@@ -108,6 +123,12 @@ namespace DataAccess
             }
 
             return listProducts;
+        }
+
+        public static bool IsDecimal(string stringToParse)
+        {
+            decimal value;
+            return Decimal.TryParse(stringToParse, NumberStyles.Any, CultureInfo.InvariantCulture, out value);
         }
     }
 }
